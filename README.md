@@ -25,34 +25,34 @@ At its simplest, a hash is a unique, fixed-length string that identifies any pie
 
 ## Ethereum Hashing
 
-Ethereum employs the **Keccak-256 hashing algorithm**, a cryptographic hash function from the **Keccak family**, producing a fixed 256-bit hash. It was selected as the basis for **SHA-3** by NIST in 2012 and is widely used in blockchain applications like Ethereum for ensuring data integrity and generating addresses.
+Ethereum employs the **Keccak-256 hashing algorithm** which is a cryptographic hash function from the **Keccak family**. This produces a fixed 256-bit hash. It was selected as the basis for **SHA-3** by NIST in 2012 and is widely used in blockchain applications like Ethereum for ensuring data integrity and generating addresses.
 
 ### Key Features of Keccak-256
 
 - **Input-Independent Length:** Accepts messages of any length but outputs a fixed 256-bit hash.
-- **Secure Properties:** Resistant to collisions and preimage attacks, ensuring robust cryptographic security.
-- **Deterministic:** The same input always generates the same hash, making it predictable for verification purposes.
-- **Efficient and Robust:** Guarantees an avalanche effect, where even small changes in the input produce significantly different outputs.
+- **Secure Properties:** Resistant to collisions and preimage attacks which ensures robust cryptographic security.
+- **Deterministic:** The same input always generates the same hash which makes it predictable for verification purposes.
+- **Efficient and Robust:** It Guarantees an avalanche effect. This is where even small changes in the input produce significantly different outputs.
 
 We will focus on the concept of hashing with Keccak-256 being a cornerstone of Ethereum's security and reliability.
 
 **Hashing Process:**
-- Any data entered into the data section of the application is processed by the SHA-256 hash algorithm, resulting in a unique hash.
-- No matter the input size, the generated hash string's length remains constant.
+- Any data entered into the data section of the application is processed by the SHA-256 hash algorithm which will result in a unique hash.
+- The generated hash string's length remains constant no matter the input size.
 
 ### Understanding Blocks
 
-Now that we understand hashing and fixed-length strings, let's look at the structure of a blockchain—a collection of blocks.
+We understand hashing and fixed-length strings so now let's look at the structure of a blockchain—a collection of blocks.
 
 **Block Structure:**
 - A block contains three parts: block number, nonce, and data.
 - All three parts are processed through the hash algorithm to produce the hash for that block.
-- Even a minor change in the data results in an entirely different hash, invalidating the block.
+- Even a minor change in the data results in an entirely different hash which invalidates the block.
 
 **Mining:**
-- Mining involves finding a nonce that produces a hash following a specific pattern, such as starting with four zeros.
+- Mining involves finding a nonce that produces a hash following a specific pattern such as starting with four zeros.
 - This process involves computational trial and error.
-- The criteria a miner must solve varies between blockchains, but the concept remains the same.
+- The criteria a miner must solve varies between blockchains but the concept remains the same.
 
 ### The Inherent Beauty of Blockchain: Immutability
 
@@ -69,13 +69,13 @@ Now that we understand hashing and fixed-length strings, let's look at the struc
 
 ### Decentralized Distribution
 
-If a single entity controlled the blockchain, they could change data and re-mine subsequent blocks, compromising security.
+If a single entity controlled the blockchain, then they could change data and re-mine subsequent blocks. As a result, this would compromise security.
 
 **Decentralization:**
 - Blockchain's power lies in its decentralized nature.
-- Multiple entities (peers) run the blockchain technology, each with equal power.
-- In case of tampering, the majority hash wins, as agreed upon by the network.
-- Nodes that disagree with the majority fork the network, continuing with their own history.
+- Multiple entities (peers) run the blockchain technology. Each has equal power.
+- In case of tampering, the majority hash wins which is agreed upon by the network.
+- Nodes that disagree with the majority fork the network. This continues with their own history.
 
 ### Interplay of Blockchain & Transactions
 
