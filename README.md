@@ -23,9 +23,18 @@ At its simplest, a hash is a unique, fixed-length string that identifies any pie
 
 ![Hash](https://github.com/jason-victor1/blockchain-info/blob/main/hash%20function.png?raw=true)
 
-**Ethereum Hashing:**
-- Ethereum uses its own hashing algorithm, Keccak-256, which is similar to SHA-256 and belongs to the SHA family.
-- For our purposes, we focus on the concept of hashing.
+## Ethereum Hashing
+
+Ethereum employs the **Keccak-256 hashing algorithm**, a cryptographic hash function from the **Keccak family**, producing a fixed 256-bit hash. It was selected as the basis for **SHA-3** by NIST in 2012 and is widely used in blockchain applications like Ethereum for ensuring data integrity and generating addresses.
+
+### Key Features of Keccak-256
+
+- **Input-Independent Length:** Accepts messages of any length but outputs a fixed 256-bit hash.
+- **Secure Properties:** Resistant to collisions and preimage attacks, ensuring robust cryptographic security.
+- **Deterministic:** The same input always generates the same hash, making it predictable for verification purposes.
+- **Efficient and Robust:** Guarantees an avalanche effect, where even small changes in the input produce significantly different outputs.
+
+We will focus on the concept of hashing with Keccak-256 being a cornerstone of Ethereum's security and reliability.
 
 **Hashing Process:**
 - Any data entered into the data section of the application is processed by the SHA-256 hash algorithm, resulting in a unique hash.
